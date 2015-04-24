@@ -1,0 +1,17 @@
+ [MULTI_IMAGES,IMAGE_NORM]=pre_testIMAGES( x9,15, 10);
+ figure
+ for i=1 : 10
+ subplot(1,10,i);
+ B = MULTI_IMAGES(i,:)
+ imshow(reshape(B,8,8));
+ end
+
+ replace testIMAGES:
+
+ IMAGES_DTest.mat (512*512*4)
+ normalize each imgaes 
+ pick some patches randomly from those normalized image and mark the label.
+ 
+
+ test  时 1千个patches 不能打乱  5个1000个相加 取最大。
+

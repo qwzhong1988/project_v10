@@ -1,0 +1,8 @@
+white ptaches can't be normalized
+too many white patches that will influence the training.
+so pre train the reinforcement part with white patches 
+but the connection become too strong
+it still can not have a stable result
+
+plan:
+add a hidden layer. 

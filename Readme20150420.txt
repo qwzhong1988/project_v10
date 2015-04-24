@@ -1,0 +1,58 @@
+patch size: 8*8 
+25 hidden units
+
+(normalized the deep learning results)
+max-min normalization for the sketches (0.1-0.9)
+store the output value without implementing sigmoid function 
+
+
+
+1.
+Train the network with nature images. (Deep learning part)
+Input:IMAGES.mat
+Output:DeepTrainResults.mat 
+
+Run train.m (run without STEP 3: Gradient Checking)
+
+
+2.
+Pre-training 
+train a white patch so that we can know the background color is white
+
+Input:white_patch_norm.mat and DeepTrainResults.mat 
+Run: pre_testwhite.m
+output:Feature_DTest_white
+
+Input: Feature_DTest_white
+Run pre_trainR.m
+output:R_W1
+
+
+3.
+Test the network (D training part) with 4 sketches
+Input:IMAGES_DTest.mat and DeepTrainResults.mat 
+Output:Feature_DTest.mat 
+
+Run testim.m
+
+4.
+Train the network with features. (Reinforcement learning part)
+Input: Feature_DTest.mat
+Output: ReinforceTrainResults.mat
+
+Run trainR.m
+
+
+5.
+Test the network with 12 sketches
+
+(1)Input: IMAGES_RTest 
+   Output: Feature_RTest
+
+   Run testim2.m
+
+
+(2)Input: Feature_RTest.mat 
+	Output: Action_RTest.mat
+
+	Run testimR.m

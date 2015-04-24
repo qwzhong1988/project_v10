@@ -1,0 +1,1 @@
+[Feature_DTest,label_DTest,fwos, patchwos] = testall(IMAGES_DTest,W1,hiddenSize,visibleSize,opttheta);

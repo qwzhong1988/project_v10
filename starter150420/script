@@ -1,0 +1,12 @@
+MULTI_IMAGE = pre_testIMAGES( x9,20,10);
+figure
+for i = 1 :10
+subplot(1,10,i);
+B = reshape(MULTI_IMAGE(i,:),8,8);
+maxB = max(max(B))
+minB = min(min(B))
+
+C= 255 * (B -  min(min(B)) ) / (  max(max(B)) -min(min (B)) );
+
+imshow(C);
+end

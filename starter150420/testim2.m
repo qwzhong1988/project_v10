@@ -1,0 +1,1 @@
+[Feature_RTest,label_RTest] = testmean(IMAGES_RTest,W1,hiddenSize,visibleSize,opttheta);
